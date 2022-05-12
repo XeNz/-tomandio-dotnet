@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.Core", "TomAndIO.Core\TomAndIO.Core.csproj", "{2AD3E82C-A7DD-4801-AE7F-CE2747F3D928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.Models", "TomAndIO.Models\TomAndIO.Models.csproj", "{2617F5C9-C118-4C65-9B67-DDC14D22F095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.Interfaces", "TomAndIO.Interfaces\TomAndIO.Interfaces.csproj", "{F873D5AB-74B1-4D96-9AAD-633BED0D5A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.Web", "TomAndIO.Web\TomAndIO.Web.csproj", "{55C9BF47-A851-41FA-9444-6B4A365A011C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.UI.Blazor", "TomAndIO.UI.Blazor\TomAndIO.UI.Blazor.csproj", "{FCB092AD-D9DA-4E6A-9326-903084FC361C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomAndIO.UI.Razor", "TomAndIO.UI.Razor\TomAndIO.UI.Razor.csproj", "{4BCCAB7A-02C5-4E61-8862-457167980C08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AD3E82C-A7DD-4801-AE7F-CE2747F3D928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD3E82C-A7DD-4801-AE7F-CE2747F3D928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD3E82C-A7DD-4801-AE7F-CE2747F3D928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD3E82C-A7DD-4801-AE7F-CE2747F3D928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2617F5C9-C118-4C65-9B67-DDC14D22F095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2617F5C9-C118-4C65-9B67-DDC14D22F095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2617F5C9-C118-4C65-9B67-DDC14D22F095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2617F5C9-C118-4C65-9B67-DDC14D22F095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F873D5AB-74B1-4D96-9AAD-633BED0D5A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F873D5AB-74B1-4D96-9AAD-633BED0D5A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F873D5AB-74B1-4D96-9AAD-633BED0D5A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F873D5AB-74B1-4D96-9AAD-633BED0D5A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C9BF47-A851-41FA-9444-6B4A365A011C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C9BF47-A851-41FA-9444-6B4A365A011C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C9BF47-A851-41FA-9444-6B4A365A011C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C9BF47-A851-41FA-9444-6B4A365A011C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB092AD-D9DA-4E6A-9326-903084FC361C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB092AD-D9DA-4E6A-9326-903084FC361C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB092AD-D9DA-4E6A-9326-903084FC361C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB092AD-D9DA-4E6A-9326-903084FC361C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BCCAB7A-02C5-4E61-8862-457167980C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BCCAB7A-02C5-4E61-8862-457167980C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BCCAB7A-02C5-4E61-8862-457167980C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BCCAB7A-02C5-4E61-8862-457167980C08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
