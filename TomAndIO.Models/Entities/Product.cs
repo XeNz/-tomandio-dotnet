@@ -12,6 +12,16 @@ public class Product
         ImageUrl = imageUrl;
         Category = category;
     }
+    
+    private Product(string name, double price, string description,
+        bool featured, string imageUrl)
+    {
+        Name = name;
+        Price = price;
+        Description = description;
+        Featured = featured;
+        ImageUrl = imageUrl;
+    }
 
     public long Id { get; set; }
 
@@ -24,6 +34,6 @@ public class Product
     public bool Featured { get; set; }
 
     public string ImageUrl { get; set; }
-
+    
     public Category Category { get; set; }
 }

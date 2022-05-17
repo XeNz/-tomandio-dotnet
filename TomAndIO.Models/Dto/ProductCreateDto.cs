@@ -5,7 +5,7 @@ namespace TomAndIO.Models.Dto;
 public class ProductCreateDto
 {
     public ProductCreateDto(string name, double price, string description,
-        bool featured, string imageUrl, Category category)
+        bool featured, string imageUrl, Category? category)
     {
         Name = name;
         Price = price;
@@ -25,5 +25,5 @@ public class ProductCreateDto
 
     public string ImageUrl { get; set; }
 
-    public Category Category { get; set; }
+    public Category? Category { get; set; }
 }

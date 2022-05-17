@@ -13,7 +13,7 @@ public class ShoppingContext : IdentityDbContext
 
     public string DbPath { get; }
 
-    public ShoppingContext(DbContextOptions<ShoppingContext> options) : base( options )
+    public ShoppingContext(DbContextOptions<ShoppingContext> options) : base(options)
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
@@ -22,4 +22,32 @@ public class ShoppingContext : IdentityDbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        
+        modelBuilder.Entity<Product>().ToTable("Category");
+        modelBuilder.Entity<Product>().ToTable("Product");
+        modelBuilder.Entity<Product>().ToTable("ShoppingCart");
+        modelBuilder.Entity<Product>().ToTable("ShoppingCartItem");
+
+        modelBuilder.Entity<Product>()
+            .HasOne(p => p.Category)
+            .WithMany()
+            .HasForeignKey("CategoryId")
+            .OnDelete(DeleteBehavior.NoAction);
+
+        modelBuilder.Entity<ShoppingCartItem>()
+            .HasOne(sci => sci.ShoppingCart)
+            .WithMany()
+            .HasForeignKey("ShoppingCartId")
+            .OnDelete(DeleteBehavior.NoAction);
+
+        modelBuilder.Entity<ShoppingCartItem>()
+            .HasOne(sci => sci.Product)
+            .WithMany()
+            .HasForeignKey("ProductId")
+            .OnDelete(DeleteBehavior.NoAction);
+    }
 }

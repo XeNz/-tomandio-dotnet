@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TomAndIO.Core.BAL.Extensions;
 using TomAndIO.Core.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +31,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 // Add services to the container.
+builder.Services.AddSharedServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

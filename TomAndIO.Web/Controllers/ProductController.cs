@@ -1,10 +1,13 @@
+using Microsoft.AspNetCore.Mvc;
 using TomAndIO.Interfaces.Services;
 using TomAndIO.Models.Dto;
 using TomAndIO.Models.Entities;
 
 namespace TomAndIO.Web.Controllers;
 
-public class ProductController
+[ApiController]
+[Route("[controller]")]
+public class ProductController : ControllerBase
 {
     private readonly IProductService _productService;
 
@@ -13,18 +16,21 @@ public class ProductController
         _productService = productService;
     }
 
-    // GET
-    public void GetProduct(Product product)
+    [HttpGet]
+    public ActionResult<string> GetProduct(Product product)
     {
         var categoryDto = new CategoryDto(product.Category.Id, product.Category.Name);
         var productDetailDto = _productService.GetProductDetail(product);
 
         var categoryProductDto = new CategoryProductDto(categoryDto, productDetailDto);
+        return Ok(categoryProductDto);
     }
 
-    // POST
-    public void AddProduct(ProductCreateDto productDto)
+    [HttpPost]
+    public ActionResult<string> AddProduct(ProductCreateDto productDto)
     {
         _productService.AddProduct(productDto);
+
+        return Ok();
     }
 }

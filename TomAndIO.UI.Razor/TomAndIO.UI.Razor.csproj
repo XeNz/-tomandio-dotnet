@@ -15,4 +15,13 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Pages\Index.cshtml.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Model" />
+      <Folder Include="Pages" />
+    </ItemGroup>
+
 </Project>
